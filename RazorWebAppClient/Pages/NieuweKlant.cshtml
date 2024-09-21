@@ -1,14 +1,26 @@
 ﻿@page
 @model RazorWebAppClient.Pages.NieuweKlantModel
 @{
-    var nieuwKlant = Data.Databank.Klanten;
+    var locaties = Data.Databank.Locaties;
+    var selectList = locaties.Select(x =>
+    new SelectListItem
+            {
+                Text = x.Gemeente,
+                Value = x.LocatieId.ToString()
+            });
     
 }
 <div>
     <h1>Nieuwe Klant</h1>
    <form method="post">
        <label>Naam:</label>
-       <input type="text" />
+       <input name="UserName" type="text" />
+       <br />
+       <label>Locatie:</label>
+       <select name="SelectLocatie" asp-items="selectList"></select>
+       <br />
+       <label>&nbsp;</label>
+       <input type="submit" value="Klant toevoegen" class="submit"></input>
       
        </form>
 </div>

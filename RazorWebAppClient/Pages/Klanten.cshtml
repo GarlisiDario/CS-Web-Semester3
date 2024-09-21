@@ -2,6 +2,7 @@
 @model RazorWebAppClient.Pages.KlantenModel
 @{
     var klanten = RazorWebAppClient.Data.Databank.Klanten;
+    var locaties = Data.Databank.Locaties;
     var rowId = 0;
 
 }
@@ -14,7 +15,8 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">KlantId</th>
-            <th scope="col">KlantNaam</th>            
+            <th scope="col">KlantNaam</th>    
+            <th scope="col">Gemeente</th>
         </tr>
     </thead>
     <tbody>
@@ -25,6 +27,7 @@
                 <th scope="row">@rowId</th>
                 <td>@klant.KlantId</td>
                 <td>@klant.KlantNaam</td>
+                <td>@klant.LocatieId</td>
             </tr>
         }
     </tbody>

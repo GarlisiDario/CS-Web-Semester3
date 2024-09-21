@@ -8,5 +8,14 @@ namespace RazorWebAppClient.Pages
         public void OnGet()
         {
         }
+        public IActionResult OnPost()
+        {
+            var selectedLocatie = Request.Form["SelectLocatie"];
+            int locatieId = int.Parse(selectedLocatie);
+            string userName = Request.Form["UserName"];
+            Data.Databank.AddKlant(userName, locatieId);
+            return RedirectToPage("KlantLocatieOverzicht");
+
+        }
     }
 }
