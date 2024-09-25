@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">The database has been started in Program.cs</h1>
+    <h4>
+        @for (int i = 1; i < teller; i++)
+        {
+            <li>
+                Dit is test @i uit de viewbag!
+            </li>
+        }
+    </h4>
+</div>
