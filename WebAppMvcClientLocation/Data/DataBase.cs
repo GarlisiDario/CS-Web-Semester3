@@ -10,7 +10,7 @@ namespace WebAppMvcClientLocation.Data
         public void StartDataBase()
         {
             Clients.Add(new Client(1,1,"Dario"));
-            Clients.Add(new Client(2, 2, "Willem"));
+            Clients.Add(new Client(2, 2, "Wille"));
             Locations.Add(new Location(1, "3630", "Maasmechelen"));
             Locations.Add(new Location(2, "3660", "Genk"));
 
