@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVCPartyInvites.Models;
 using System.Diagnostics;
-using WebAppMvcClientLocation.Models;
-using WebAppMvcClientLocation.Data;
 
-namespace WebAppMvcClientLocation.Controllers
+namespace MVCPartyInvites.Controllers
 {
     public class HomeController : Controller
     {
@@ -16,7 +15,7 @@ namespace WebAppMvcClientLocation.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(Data.LocalData.GastList);
         }
 
         public IActionResult Privacy()
@@ -29,13 +28,5 @@ namespace WebAppMvcClientLocation.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public IActionResult TestViewBag()
-        {
-            DataBase.StartDataBase();
-            ViewBag.Client = DataBase.Clients.Count;
-            ViewBag.Locatie = DataBase.Locations.Count;
-            return View();
-        }
-        
     }
 }

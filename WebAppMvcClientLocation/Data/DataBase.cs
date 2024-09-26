@@ -7,8 +7,10 @@ namespace WebAppMvcClientLocation.Data
         public static List<Client> Clients { get; set; }
         public static List<Location> Locations { get; set; }
 
-        public void StartDataBase()
+        public static void StartDataBase()
         {
+            Clients = new List<Client>();
+            Locations = new List<Location>();   
             Clients.Add(new Client(1,1,"Dario"));
             Clients.Add(new Client(2, 2, "Wille"));
             Locations.Add(new Location(1, "3630", "Maasmechelen"));
