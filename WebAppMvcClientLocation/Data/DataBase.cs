@@ -2,10 +2,25 @@
 
 namespace WebAppMvcClientLocation.Data
 {
-    public class DataBase
+    public static class DataBase
     {
         public static List<Client> Clients { get; set; }
         public static List<Location> Locations { get; set; }
+        public static InsertResult AddClient(Client c)
+        {
+            InsertResult result = new InsertResult();
+            Clients.Add(c);
+            result.Succeeded = true;
+            return result;
+        }
+        public static InsertResult AddLocation(Location l)
+        {
+            InsertResult result = new InsertResult();
+            Locations.Add(l);
+            result.Succeeded = true;
+            return result;
+        }
+
 
         public static void StartDataBase()
         {

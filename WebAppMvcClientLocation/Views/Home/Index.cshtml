@@ -4,10 +4,20 @@
     var LocatieTeller = ViewBag.Locatie;
 
 }
-
-<div class="text-center">
-    <h1 class="display-4">The database has been started in Program.cs</h1>
-    <h4>Client Records: @clientTeller </h4>
-    <br />
-    <h4>Locatie records: @LocatieTeller</h4>
+<div class="startPage" >
+    <div class="navBar">
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Clients" asp-action="Index"> Clients</a></li>
+            <li><a href="\Locations">Locations</a></li>
+            <li><a href="\Overview">Overview</a></li>
+        </ul>
+    </div>
+    <div class="text-center">
+        <h1 class="display-4">The database has been started in Program.cs</h1>
+        <h4>Client Records: @clientTeller </h4>
+        <br />
+        <h4>Locatie records: @LocatieTeller</h4>
+    </div>
 </div>
+

@@ -14,8 +14,13 @@ namespace WebAppMvcClientLocation.Controllers
             _logger = logger;
         }
 
+        
         public IActionResult Index()
         {
+            DataBase.StartDataBase();
+            ViewBag.Client = DataBase.Clients.Count;
+            ViewBag.Locatie = DataBase.Locations.Count;
+            Console.WriteLine(DataBase.Clients.Count);
             return View();
         }
 
@@ -28,13 +33,6 @@ namespace WebAppMvcClientLocation.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-        public IActionResult TestViewBag()
-        {
-            DataBase.StartDataBase();
-            ViewBag.Client = DataBase.Clients.Count;
-            ViewBag.Locatie = DataBase.Locations.Count;
-            return View();
         }
         
     }

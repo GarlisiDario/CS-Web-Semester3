@@ -1,10 +1,12 @@
-﻿namespace WebAppMvcClientLocation.Models
+﻿
+namespace WebAppMvcClientLocation.Models
 {
     public class ClientLocation
     {
+       private List<ClientLocation> clientLocation = new List<ClientLocation>();
        public IEnumerable<ClientLocation> Overview()
         {
-            return null;
+            return clientLocation;
         }
         
         public string ClientName { get; set; }
