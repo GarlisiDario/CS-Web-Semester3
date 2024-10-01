@@ -1,17 +1,17 @@
 ﻿@model WebAppMvcClientLocation.Models.Client
 @{
 }
-<div class="CreateDiv" >
+<div class="CreateClientPage" >
     <h1>Create</h1>
     <h3>Client</h3>
-    <form method="post">
+    <form method="post"asp-action="Create" class="CreateClientPage">
         <label >ClientId</label>
         <input name="clientId"/>
         <label >LocationId</label>
-        <input name="LocId" />
+        <input name="locId" />
         <label >ClientName</label>
-        <input name="clieName" />
+        <input name="clientName" />
     </form>
-    <button class="">Create</button>
+    <button class="" type="submit">Create</button>
     <a asp-action="Index">Back to List</a>
 </div>

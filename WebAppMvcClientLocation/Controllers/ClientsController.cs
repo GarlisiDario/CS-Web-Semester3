@@ -14,6 +14,12 @@ namespace WebAppMvcClientLocation.Controllers
         [HttpPost]
         public IActionResult Create(Client c) 
         {
+            string userid = Request.Form["clientId"];
+            string locationId = Request.Form["locId"];
+            string clientName = Request.Form["clientName"];
+            c.ClientId = int.Parse(userid);
+            c.ClientName = clientName;
+            c.LocatieId = int.Parse(locationId);
             var r = Data.DataBase.AddClient(c);
             if (r.Succeeded) 
             {

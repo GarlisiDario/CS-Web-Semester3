@@ -16,23 +16,29 @@ html {
 body {
   margin-bottom: 60px;
 }
-.startPage{
-    display:flex;
-
+.startPage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    
 }
 .navBar{
     border:solid;
     border-color:dodgerblue;
-    padding:2%
+    padding:5%;
+   
+   
 }
 .text-center {
     border: solid;
     border-color: dodgerblue;
-    padding: 5%
+    padding: 5%;
+    min-width: 80%;
 }
-.CreateDiv{
-    display:flex;
-    flex-direction:column;
-    max-width:20%
-
+.CreateClientPage {
+    display: flex;
+    flex-direction: column;
+    
 }

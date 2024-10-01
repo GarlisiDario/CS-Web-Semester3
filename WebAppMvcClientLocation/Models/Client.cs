@@ -11,5 +11,9 @@
             ClientName = clientName;
             LocatieId = locatieId;
         }
+        public Client()
+        {
+
+        }
     }
 }
