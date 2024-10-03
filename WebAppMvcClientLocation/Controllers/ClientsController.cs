@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebAppMvcClientLocation.Data;
 using WebAppMvcClientLocation.Models;
 
 namespace WebAppMvcClientLocation.Controllers
@@ -10,22 +11,39 @@ namespace WebAppMvcClientLocation.Controllers
         {
             return View(Data.DataBase.Clients);
         }
-        public IActionResult Create() { return View(); }
+        [HttpGet]
+        public IActionResult Create() 
+        {
+            var client = new Client();
+            return View(client); 
+        }
         [HttpPost]
         public IActionResult Create(Client c) 
         {
-            string userid = Request.Form["clientId"];
-            string locationId = Request.Form["locId"];
-            string clientName = Request.Form["clientName"];
-            c.ClientId = int.Parse(userid);
-            c.ClientName = clientName;
-            c.LocatieId = int.Parse(locationId);
-            var r = Data.DataBase.AddClient(c);
-            if (r.Succeeded) 
+            if (ModelState.IsValid) 
             {
+                DataBase.Clients.Add(c);
                 return RedirectToAction("Index");
             }
-            return View();
+            
+            return View(c);
+        }
+        [HttpGet]
+        public IActionResult CreateLocation()
+        {
+            var loc = new Location();
+            return View(loc);
+        }
+        [HttpPost]
+        public IActionResult CreateLocation(Location l)
+        {
+            if (ModelState.IsValid)
+            {
+                DataBase.Locations.Add(l);
+                return RedirectToAction("Index");
+            }
+
+            return View(l);
         }
 
     }

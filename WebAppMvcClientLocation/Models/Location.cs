@@ -11,5 +11,10 @@
             PostCode = postCode;
             City = city;
         }
+        public Location() 
+        {
+            LocationId = -1;
+
+        }
     }
 }

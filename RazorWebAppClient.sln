@@ -9,7 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCWebApp", "MVCWebApp\MVCW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppMvcClientLocation", "WebAppMvcClientLocation\WebAppMvcClientLocation.csproj", "{447F0BB8-27EA-4769-9AD3-229383042D90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCPartyInvites", "MVCPartyInvites\MVCPartyInvites.csproj", "{BC55E281-44F9-4653-9DC1-5C891028CFE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCPartyInvites", "MVCPartyInvites\MVCPartyInvites.csproj", "{BC55E281-44F9-4653-9DC1-5C891028CFE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCModelValidation", "MVCModelValidation\MVCModelValidation.csproj", "{81FBBB5A-B166-445F-BF86-379D28D6159A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcTestEFCore", "MvcTestEFCore\MvcTestEFCore.csproj", "{BB0429F5-005D-4A17-A389-DC1ED4F74ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCFifa", "MVCFifa\MVCFifa.csproj", "{C70E95EC-38A1-4BC9-926D-494C9D40E98F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{BC55E281-44F9-4653-9DC1-5C891028CFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC55E281-44F9-4653-9DC1-5C891028CFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC55E281-44F9-4653-9DC1-5C891028CFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81FBBB5A-B166-445F-BF86-379D28D6159A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81FBBB5A-B166-445F-BF86-379D28D6159A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81FBBB5A-B166-445F-BF86-379D28D6159A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81FBBB5A-B166-445F-BF86-379D28D6159A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB0429F5-005D-4A17-A389-DC1ED4F74ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB0429F5-005D-4A17-A389-DC1ED4F74ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB0429F5-005D-4A17-A389-DC1ED4F74ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB0429F5-005D-4A17-A389-DC1ED4F74ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C70E95EC-38A1-4BC9-926D-494C9D40E98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C70E95EC-38A1-4BC9-926D-494C9D40E98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C70E95EC-38A1-4BC9-926D-494C9D40E98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C70E95EC-38A1-4BC9-926D-494C9D40E98F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

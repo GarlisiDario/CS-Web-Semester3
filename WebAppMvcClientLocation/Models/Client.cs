@@ -13,7 +13,8 @@
         }
         public Client()
         {
-
+            ClientId = -1;
+            ClientName = string.Empty;
         }
     }
 }

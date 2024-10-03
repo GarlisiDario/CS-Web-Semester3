@@ -4,8 +4,8 @@ namespace WebAppMvcClientLocation.Data
 {
     public static class DataBase
     {
-        public static List<Client> Clients { get; set; }
-        public static List<Location> Locations { get; set; }
+        public static List<Client> Clients = new List<Client>();
+        public static List<Location> Locations = new List<Location>();
         public static InsertResult AddClient(Client c)
         {
             InsertResult result = new InsertResult();

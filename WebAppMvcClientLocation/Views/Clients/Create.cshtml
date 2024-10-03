@@ -4,14 +4,15 @@
 <div class="CreateClientPage" >
     <h1>Create</h1>
     <h3>Client</h3>
-    <form method="post"asp-action="Create" class="CreateClientPage">
-        <label >ClientId</label>
-        <input name="clientId"/>
-        <label >LocationId</label>
-        <input name="locId" />
-        <label >ClientName</label>
-        <input name="clientName" />
+    <form asp-action="Create" class="CreateClientPage">
+        <label asp-for="ClientId" >ClientId</label>
+        <input asp-for="ClientId" name="clientId"/>
+        <label asp-for="LocatieId" >LocationId</label>
+        <input asp-for="LocatieId" name="locId" />
+        <label asp-for="ClientName" >ClientName</label>
+        <input asp-for="ClientName" name="clientName" />
+        <input type="submit" value="Create" class="btn btn-primary"  />
     </form>
-    <button class="" type="submit">Create</button>
+    
     <a asp-action="Index">Back to List</a>
 </div>
