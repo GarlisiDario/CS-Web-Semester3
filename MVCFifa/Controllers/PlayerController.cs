@@ -7,10 +7,12 @@ namespace MVCFifa.Controllers
     public class PlayerController : Controller
     {
         ApplicationDbContext _context;
-        public PlayerController(ApplicationDbContext context)
+        private IWebHostEnvironment _environment;
+        public PlayerController(ApplicationDbContext context, IWebHostEnvironment environment)
         {
             _context = context;
             _context.Database.EnsureCreated();
+            _environment = environment;
         }
         public IActionResult Index()
         {
@@ -32,6 +34,20 @@ namespace MVCFifa.Controllers
                 AddPlayer(player);
                 return RedirectToAction("Index");
             }
+            return View(player);
+        }
+        public IActionResult Details(int id) 
+        {
+            var player = _context.Players.Where(p => p.PlayerId == id).FirstOrDefault();
+            var fileExist = false;
+            if (player.ImageLink != null ) 
+            {
+                var path = _environment.WebRootPath;
+                var file = Path.Combine($"{path}\\images",player.ImageLink);
+                fileExist = System.IO.File.Exists(file);
+                
+            }
+            ViewBag.FileExist = fileExist;
             return View(player);
         }
         private void AddPlayer(Player player) 
