@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using MVCFifa.Data;
 using MVCFifa.Models;
+using MVCFifa.ViewModel;
 
 namespace MVCFifa.Controllers
 {
@@ -11,7 +13,7 @@ namespace MVCFifa.Controllers
         public PlayerController(ApplicationDbContext context, IWebHostEnvironment environment)
         {
             _context = context;
-            _context.Database.EnsureCreated();
+           
             _environment = environment;
         }
         public IActionResult Index()
@@ -36,6 +38,23 @@ namespace MVCFifa.Controllers
             }
             return View(player);
         }
+        [HttpGet]
+        public IActionResult Create2()
+        {
+            var newPlayer = new NewPlayer();
+            ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "TeamName");
+            return View(newPlayer);
+        }
+        [HttpPost]
+        public IActionResult Create2(NewPlayer newPlayer)
+        {
+            if (ModelState.IsValid)
+            {
+                AddNewPlayer(newPlayer);
+                return RedirectToAction("Index");
+            }
+            return View(newPlayer);
+        }
         public IActionResult Details(int id) 
         {
             var player = _context.Players.Where(p => p.PlayerId == id).FirstOrDefault();
@@ -53,6 +72,11 @@ namespace MVCFifa.Controllers
         private void AddPlayer(Player player) 
         {
             _context.Players.Add(player);
+            _context.SaveChanges();
+        }
+        private void AddNewPlayer(NewPlayer newPlayer)
+        {
+            _context.NewPlayer.Add(newPlayer);
             _context.SaveChanges();
         }
     }

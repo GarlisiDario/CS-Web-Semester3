@@ -10,5 +10,7 @@ namespace MVCFifa.Models
         [Required]
         public string? LastName { get; set; }
         public string? ImageLink { get; set; }
+
+        public ICollection<TeamPlayer>? TeamPlayers { get; set; }
     }
 }

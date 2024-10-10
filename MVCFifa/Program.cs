@@ -2,13 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using MVCFifa.Data;
 using System.Text;
 var builder = WebApplication.CreateBuilder(args);
-var sb = new StringBuilder();
-sb.Append("Server=(localdb)\\mssqllocaldb;");
-sb.Append("Database=fifaDb;");
-sb.Append("Trusted_Connection=true;");
-sb.Append("MultipleActiveResultSets=true;");
-var connString = sb.ToString();
+
+var connString = builder.Configuration.GetConnectionString("ApplicationDbContext");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connString));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

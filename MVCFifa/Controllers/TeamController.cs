@@ -10,7 +10,7 @@ namespace MVCFifa.Controllers
         public TeamController(ApplicationDbContext context)
         {
             _context = context;
-            _context.Database.EnsureCreated();
+            //_context.Database.EnsureCreated();
         }
         public IActionResult Index()
         {
