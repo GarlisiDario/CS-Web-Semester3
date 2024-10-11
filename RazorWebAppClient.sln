@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCModelValidation", "MVCMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcTestEFCore", "MvcTestEFCore\MvcTestEFCore.csproj", "{BB0429F5-005D-4A17-A389-DC1ED4F74ACD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCFifa", "MVCFifa\MVCFifa.csproj", "{C70E95EC-38A1-4BC9-926D-494C9D40E98F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCFifa", "MVCFifa\MVCFifa.csproj", "{C70E95EC-38A1-4BC9-926D-494C9D40E98F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppMVCClientLocationEFCore", "WebAppMVCClientLocationEFCore\WebAppMVCClientLocationEFCore.csproj", "{CD284EBF-CAB5-4E6D-AED6-15F9BFF88110}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppMVCClientLocationEFCore", "WebAppMVCClientLocationEFCore\WebAppMVCClientLocationEFCore.csproj", "{CD284EBF-CAB5-4E6D-AED6-15F9BFF88110}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCSportStore", "MVCSportStore\MVCSportStore.csproj", "{1B4AAA28-0C46-4C02-8304-AFC4BCCD83C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{CD284EBF-CAB5-4E6D-AED6-15F9BFF88110}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD284EBF-CAB5-4E6D-AED6-15F9BFF88110}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD284EBF-CAB5-4E6D-AED6-15F9BFF88110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B4AAA28-0C46-4C02-8304-AFC4BCCD83C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B4AAA28-0C46-4C02-8304-AFC4BCCD83C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B4AAA28-0C46-4C02-8304-AFC4BCCD83C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B4AAA28-0C46-4C02-8304-AFC4BCCD83C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

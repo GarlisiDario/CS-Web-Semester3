@@ -76,8 +76,15 @@ namespace MVCFifa.Controllers
         }
         private void AddNewPlayer(NewPlayer newPlayer)
         {
-            _context.NewPlayer.Add(newPlayer);
+            Player p = new Player();
+            p.FirstName = newPlayer.FirstName;
+            p.LastName = newPlayer.LastName;
+            p.ImageLink = newPlayer.ImageLink;
+            _context.Players.Add(p);
             _context.SaveChanges();
+
+            var tp = new TeamPlayer();
+            
         }
     }
 
