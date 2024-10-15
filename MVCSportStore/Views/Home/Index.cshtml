@@ -1,10 +1,11 @@
-﻿@model IEnumerable<Product>
+﻿@using MVCSportStore.ViewModels;
+@model ProductModel;
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    @foreach (var p in Model)
+    @foreach (var p in Model.Products)
     {
         <div>
             <h3>@p.Name</h3>
@@ -12,6 +13,15 @@
             <h4>
                 @p.ProductPrice.ToString("c")
             </h4>
+        </div>
+    }
+</div>
+<br />
+<div class="row">
+    @for (int i = 1; i <= Model.PagingInfo.TotalPages; i++)
+    {
+        <div class="col text-center">
+            <a asp-controller="Home" asp-action="Index" asp-route-id="@i">@i</a>
         </div>
     }
 </div>

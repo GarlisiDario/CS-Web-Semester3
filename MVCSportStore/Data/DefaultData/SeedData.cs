@@ -6,6 +6,7 @@ namespace MVCSportStore.Data.DefaultData
     {
         public static void EnsurePopulated(WebApplication app)
         {
+
             using (var scope = app.Services.CreateScope())
             {
                 var context = scope.ServiceProvider.GetRequiredService<StoreDbContext>();
@@ -21,5 +22,13 @@ namespace MVCSportStore.Data.DefaultData
                 
             }
         }
+        private static IEnumerable<string> Products => GetProductList();
+        private static IEnumerable<string> GetProductList()
+        {
+            List<string> products = new List<string>();
+            //Teams data
+            return products;
+        }
+
     }
 }
