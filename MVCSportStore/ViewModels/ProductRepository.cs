@@ -14,14 +14,14 @@ namespace MVCSportStore.ViewModels
         {
             return _context.Products
             .OrderBy(p => p.ProductId)
-            .Skip((productPage - 1) * PaginaSettings.ProductPagination)
-            .Take(PaginaSettings.ProductPagination);
+            .Skip((productPage - 1) * PagingSettings.ProductPagination)
+            .Take(PagingSettings.ProductPagination);
         }
         private PagingInfo GetPagingInfo(int productPage)
         {
             var pagingInfo = new PagingInfo();
             pagingInfo.CurrentPage = productPage;
-            pagingInfo.PageItems = PaginaSettings.ProductPagination;
+            pagingInfo.PageItems = PagingSettings.ProductPagination;
             pagingInfo.TotalItems = _context.Products.Count();
             return pagingInfo;
         }
