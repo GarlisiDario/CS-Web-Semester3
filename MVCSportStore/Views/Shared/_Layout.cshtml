@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/MVCSportStore.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    @* <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-black border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MVCSportStore</a>
@@ -32,21 +32,61 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - MVCSportStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </header> *@
+   
+        <div class="bg-dark text-white p-2">
+            <span class="navbar-brand ml-2">Sports Store </span>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between flex-row">
+                <ul class="navbar-nav flex-grow-1  flex-row">
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Product" asp-action="Create">Add Product</a>
+                    </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Reseller" asp-action="Index">Resellers</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Reseller" asp-action="Create2">AddResellersStock</a>
+                </li>
+                </ul>
+            </div>
         </div>
+        <div class="row m-1 p-1">
+            <div id="categorie" class="col-3">
+                <vc:navigation-menu></vc:navigation-menu>
+            </div>
+            <div  class="col-9">
+                @RenderBody()
+            </div>
+        </div>
+
+
+    <footer class="bg-dark text-white p-1 footer fixed-bottom">
+        <hr>
+        <span class="navbar-brand ml-2">
+            <a class="btn border border-secondary m-1 text-white"
+               asp-controller="Home" asp-action="Index">
+                SportStore - Start page
+            </a>
+            <a class="btn border border-secondary m-1 text-white"
+               asp-controller="Settings" asp-action="PagingSettingsView">
+                SportStore - Page settings
+            </a>
+            <a class="btn border border-secondary m-1 text-white"
+               asp-controller="Reseller" asp-action="Index">
+                SportStore - Resellers
+            </a>
+        </span>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+</html>
 </html>

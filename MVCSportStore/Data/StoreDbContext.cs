@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MVCSportStore.Models;
+using MVCSportStore.ViewModels;
 
 namespace MVCSportStore.Data
 {
@@ -11,5 +12,8 @@ namespace MVCSportStore.Data
 
         }
         public DbSet<Product>? Products { get; set; }
+        public DbSet<Reseller> Resellers { get; set; }
+        public DbSet<ResellerStock> ResellerStocks { get; set; }
+        
     }
 }

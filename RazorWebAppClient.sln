@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCFifa", "MVCFifa\MVCFifa.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppMVCClientLocationEFCore", "WebAppMVCClientLocationEFCore\WebAppMVCClientLocationEFCore.csproj", "{CD284EBF-CAB5-4E6D-AED6-15F9BFF88110}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCSportStore", "MVCSportStore\MVCSportStore.csproj", "{1B4AAA28-0C46-4C02-8304-AFC4BCCD83C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCSportStore", "MVCSportStore\MVCSportStore.csproj", "{1B4AAA28-0C46-4C02-8304-AFC4BCCD83C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCTagHelper", "..\..\..\..\OneDrive\Documenten\2PRO\CS Web\MVCTagHelper\MVCTagHelper\MVCTagHelper.csproj", "{8834E331-3B37-4029-AAA9-C95E2352FD73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{1B4AAA28-0C46-4C02-8304-AFC4BCCD83C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B4AAA28-0C46-4C02-8304-AFC4BCCD83C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B4AAA28-0C46-4C02-8304-AFC4BCCD83C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8834E331-3B37-4029-AAA9-C95E2352FD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8834E331-3B37-4029-AAA9-C95E2352FD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8834E331-3B37-4029-AAA9-C95E2352FD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8834E331-3B37-4029-AAA9-C95E2352FD73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

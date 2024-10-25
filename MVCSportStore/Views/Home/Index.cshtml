@@ -4,7 +4,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+@* <div class="text-center">
     @foreach (var p in Model.Products)
     {
         <div>
@@ -16,12 +16,22 @@
         </div>
     }
 </div>
+<br /> *@
+<div>
+    @foreach (var p in Model.Products)
+    {
+        <partial name="ProductSummary" model="p"></partial>
+    }
+</div>
 <br />
 <div class="row">
     @for (int i = 1; i <= Model.PagingInfo.TotalPages; i++)
     {
-        <div class="col text-center">
-            <a asp-controller="Home" asp-action="Index" asp-route-id="@i">@i</a>
-        </div>
+        <span style="float:left;width:50px">
+            <a class="btn border border-secondary m-1"
+               asp-controller="Home" asp-action="Index" asp-route-id="@i">@i</a>
+        </span>
     }
 </div>
+<br />
+<page-link paging-info="@Model.PagingInfo"></page-link>

@@ -19,10 +19,24 @@ namespace MVCSportStore.Controllers
             _repo = new ProductRepository(_context);
         }
 
-        public IActionResult Index(int id = 1)
+
+        public IActionResult Index(int id = 1,string category = null)
         {
-            var productModel = _repo.GetProductModel(id);
+            if (category != null)
+                AddRouteKey("category", category);
+            var productModel = _repo.GetProductModel(id,category);
             return View(productModel);
+        }
+        private void AddRouteKey(string key, string keyValue) 
+        {
+            if (base.RouteData.Values.ContainsKey(key)) 
+            {
+                base.RouteData.Values[key] = keyValue;
+            }
+            else
+            {
+                base.RouteData.Values.Add(key, keyValue);
+            }
         }
 
         public IActionResult Privacy()

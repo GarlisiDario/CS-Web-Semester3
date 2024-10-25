@@ -27,5 +27,6 @@ namespace MVCSportStore.Models
         public string? Category { get; set; }
         public decimal ProductPrice =>
             (Price == null)?0 : (decimal)Price;
+        public ICollection<ResellerStock> ResellerStocks { get; set; }
     }
 }

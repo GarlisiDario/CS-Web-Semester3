@@ -19,8 +19,12 @@ namespace MVCSportStore.Data.DefaultData
                     }
                     context.SaveChanges();
                 }
-                
+                MatchResellerData(context);              
             }
+        }
+        public static void MatchResellerData(StoreDbContext context)
+        {
+
         }
         private static IEnumerable<string> Products => GetProductList();
         private static IEnumerable<string> GetProductList()

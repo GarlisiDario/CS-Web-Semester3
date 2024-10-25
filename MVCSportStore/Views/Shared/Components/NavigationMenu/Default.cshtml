@@ -1,0 +1,27 @@
+﻿@model IEnumerable<string>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    string style = "btn btn-outline-secondary btn-block m-2";
+    string styleActive = "btn btn-outline-primary btn-block m-2";
+}
+@{
+
+    @foreach(string category in Model)
+    { 
+        <div class="row">
+            <a class="@((category == ViewBag.SelectedCategory)
+                        ? styleActive : style)"
+               asp-action="Index"
+               asp-controller="Home"
+               asp-route-id="1"
+               asp-route-category="@category">
+              
+                @category
+            </a>
+            <br />
+        </div>
+        
+    }
+}
